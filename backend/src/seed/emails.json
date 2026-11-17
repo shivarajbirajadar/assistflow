@@ -1,0 +1,4770 @@
+{
+  "_readme": "Seed file. daysAgo + time (HH:MM, 24h IST) are relative: seed.js converts to real dates at seed time. expectedLabel is ground truth for testing only and must NOT be shown in the UI. Labels: assistant_reply | client_reply | no_reply | needs_review. Tags: meeting, action_required, important, general, waiting_for_response. assignedTo = handled by (assistantId). messages[].sentBy = who replied (assistantId or OWN-001). dueInDays and meeting.inDays are days from seed time. snoozedForDays = days left on snooze. ownerAction = owner marked handled or took over (with note). activity = explicit audit entries; seed.js also derives reply_sent entries from outgoing messages.",
+  "conversations": [
+    {
+      "key": "a1-001",
+      "accountKey": "a1",
+      "subject": "Move Wednesday board call to Thursday 4 PM",
+      "expectedLabel": "assistant_reply",
+      "tags": [
+        "meeting"
+      ],
+      "assignedTo": "AST-101",
+      "isUnread": true,
+      "isStarred": false,
+      "meeting": {
+        "inDays": 3,
+        "time": "16:00",
+        "title": "Board call (proposed)"
+      },
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Nikhil Arora",
+            "email": "nikhil@humanityfounders.demo"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "body": "Two board members are travelling on Wednesday, so we need to move the board call to Thursday at 4 PM. Can your office confirm Rohan is free and send the updated invite?",
+          "daysAgo": 1,
+          "time": "10:20",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a1-002",
+      "accountKey": "a1",
+      "subject": "Demo Day logistics: AV, stage and seating",
+      "expectedLabel": "assistant_reply",
+      "tags": [
+        "action_required",
+        "meeting"
+      ],
+      "assignedTo": "AST-104",
+      "isUnread": false,
+      "isStarred": false,
+      "dueInDays": 3,
+      "meeting": {
+        "inDays": 21,
+        "time": "10:00",
+        "title": "Humanity Founders Demo Day"
+      },
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "The Orchid Convention Centre",
+            "email": "events@orchidconvention.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "body": "Hello, confirming Demo Day on 5 Dec. Do you need AV support for 150 guests and a livestream?",
+          "daysAgo": 7,
+          "time": "10:05",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        },
+        {
+          "direction": "out",
+          "from": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "to": {
+            "name": "The Orchid Convention Centre",
+            "email": "events@orchidconvention.in"
+          },
+          "body": "Yes, full AV with livestream, and a stage for 4 panelists. Please share a quote.",
+          "daysAgo": 6,
+          "time": "11:30",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": "AST-104"
+        },
+        {
+          "direction": "in",
+          "from": {
+            "name": "The Orchid Convention Centre",
+            "email": "events@orchidconvention.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "body": "Quote attached: INR 3,85,000 including AV, stage and 150 seats.",
+          "daysAgo": 5,
+          "time": "15:00",
+          "attachments": [
+            "Quote_DemoDay.pdf"
+          ],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        },
+        {
+          "direction": "out",
+          "from": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "to": {
+            "name": "The Orchid Convention Centre",
+            "email": "events@orchidconvention.in"
+          },
+          "body": "Thanks. Could you bring this down with a package that includes catering?",
+          "daysAgo": 4,
+          "time": "10:40",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": "AST-104"
+        },
+        {
+          "direction": "in",
+          "from": {
+            "name": "The Orchid Convention Centre",
+            "email": "events@orchidconvention.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "body": "We can offer INR 3,50,000 with the catering package.",
+          "daysAgo": 3,
+          "time": "12:15",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        },
+        {
+          "direction": "in",
+          "from": {
+            "name": "The Orchid Convention Centre",
+            "email": "events@orchidconvention.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "body": "Please confirm the final headcount and menu by Friday so we can lock the hall.",
+          "daysAgo": 1,
+          "time": "09:30",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": [
+        {
+          "by": "AST-104",
+          "action": "assigned",
+          "daysAgo": 7,
+          "time": "12:00",
+          "from": "AST-101",
+          "to": "AST-104"
+        }
+      ]
+    },
+    {
+      "key": "a1-003",
+      "accountKey": "a1",
+      "subject": "Scheduling the mentor session with Rohan",
+      "expectedLabel": "assistant_reply",
+      "tags": [
+        "meeting"
+      ],
+      "assignedTo": "AST-103",
+      "isUnread": false,
+      "isStarred": false,
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Prof. Leela Ramaswamy",
+            "email": "leela.ramaswamy@advisors.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "body": "Rohan has agreed to a 45 minute session. I am free Tue 5 PM, Wed 11 AM or Fri 3 PM next week. Which suits him?",
+          "daysAgo": 2,
+          "time": "09:10",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a1-004",
+      "accountKey": "a1",
+      "subject": "Data room access for our analyst",
+      "expectedLabel": "assistant_reply",
+      "tags": [
+        "action_required"
+      ],
+      "assignedTo": "AST-101",
+      "isUnread": true,
+      "isStarred": false,
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Anika Rao",
+            "email": "anika.rao@horizonendowment.org"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "body": "Could you please add our analyst, Tarun Bhatia, to the read-only Quarterly Reports folder of the Fund II data room? Same access as I have.",
+          "daysAgo": 1,
+          "time": "14:45",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a1-005",
+      "accountKey": "a1",
+      "subject": "Invoice PP-2291: Gramin Health brand refresh",
+      "expectedLabel": "assistant_reply",
+      "tags": [
+        "action_required"
+      ],
+      "assignedTo": "AST-104",
+      "isUnread": false,
+      "isStarred": false,
+      "dueInDays": 13,
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Pixel & Pine Studio",
+            "email": "billing@pixelandpine.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "body": "Invoice PP-2291 for the Gramin Health brand refresh, INR 1,86,000, is attached. Payment terms are 15 days.",
+          "daysAgo": 2,
+          "time": "10:30",
+          "attachments": [
+            "PP-2291.pdf"
+          ],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a1-006",
+      "accountKey": "a1",
+      "subject": "Seat and meal preference for Tuesday's flight",
+      "expectedLabel": "assistant_reply",
+      "tags": [
+        "action_required"
+      ],
+      "assignedTo": "AST-101",
+      "isUnread": true,
+      "isStarred": false,
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Wanderline Travels",
+            "email": "desk@wanderline.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "body": "For Rohan's Tuesday flight to Delhi, please confirm seat (aisle or window) and meal preference so we can finalise the ticket.",
+          "daysAgo": 1,
+          "time": "16:20",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a1-007",
+      "accountKey": "a1",
+      "subject": "Gramin Health launch: logo pack and spokesperson",
+      "expectedLabel": "assistant_reply",
+      "tags": [
+        "action_required"
+      ],
+      "assignedTo": "AST-103",
+      "isUnread": false,
+      "isStarred": false,
+      "dueInDays": 3,
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Prime Narratives PR",
+            "email": "team@primenarratives.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "body": "For the Gramin Health launch we need the final logo pack and a spokesperson for the 12 Dec media briefing. Could you share both by Thursday?",
+          "daysAgo": 2,
+          "time": "11:50",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": [
+        {
+          "by": "AST-103",
+          "action": "label_changed",
+          "daysAgo": 2,
+          "time": "15:10",
+          "from": "needs_review",
+          "to": "assistant_reply"
+        }
+      ]
+    },
+    {
+      "key": "a1-008",
+      "accountKey": "a1",
+      "subject": "LP annual meeting: confirm invitee list",
+      "expectedLabel": "assistant_reply",
+      "tags": [],
+      "assignedTo": "AST-101",
+      "isUnread": false,
+      "isStarred": false,
+      "snoozedForDays": 2,
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Nikhil Arora",
+            "email": "nikhil@humanityfounders.demo"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "body": "Please confirm the LP invitee list for the annual meeting is final and share it with the venue.",
+          "daysAgo": 3,
+          "time": "13:00",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": [
+        {
+          "by": "AST-101",
+          "action": "snoozed",
+          "daysAgo": 3,
+          "time": "13:20",
+          "note": "Snoozed for 2 days"
+        }
+      ]
+    },
+    {
+      "key": "a1-009",
+      "accountKey": "a1",
+      "subject": "Panel slots for Head of Impact finalists",
+      "expectedLabel": "assistant_reply",
+      "tags": [
+        "meeting",
+        "action_required"
+      ],
+      "assignedTo": "AST-103",
+      "isUnread": false,
+      "isStarred": false,
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Ananya Rao",
+            "email": "ananya@humanityfounders.demo"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "body": "We need three 45 minute panel slots with Rohan for the Head of Impact finalists next week. Could you block Mon, Tue or Thu afternoon?",
+          "daysAgo": 2,
+          "time": "17:00",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a1-010",
+      "accountKey": "a1",
+      "subject": "Pick-up of signed agreements today",
+      "expectedLabel": "assistant_reply",
+      "tags": [
+        "action_required"
+      ],
+      "assignedTo": "AST-104",
+      "isUnread": true,
+      "isStarred": false,
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "SwiftCourier",
+            "email": "pickup@swiftcourier.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "body": "Our executive will collect the signed agreements at 5 PM today. Please confirm someone is available at the office.",
+          "daysAgo": 1,
+          "time": "08:40",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a1-011",
+      "accountKey": "a1",
+      "subject": "Membership renewal: 12-seat studio",
+      "expectedLabel": "assistant_reply",
+      "tags": [
+        "action_required"
+      ],
+      "assignedTo": "AST-104",
+      "isUnread": false,
+      "isStarred": false,
+      "dueInDays": 14,
+      "snoozedForDays": 3,
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Workhub Indiranagar",
+            "email": "renewals@workhub.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "body": "Your membership renewal for the 12-seat studio is due on the 30th. Renewal quote attached.",
+          "daysAgo": 4,
+          "time": "12:00",
+          "attachments": [
+            "Renewal_Quote.pdf"
+          ],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a1-012",
+      "accountKey": "a1",
+      "subject": "Passes for ImpactSummit India",
+      "expectedLabel": "assistant_reply",
+      "tags": [
+        "meeting"
+      ],
+      "assignedTo": "AST-101",
+      "isUnread": false,
+      "isStarred": false,
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "ImpactSummit India",
+            "email": "passes@impactsummit.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "body": "Please share names and email IDs of the three attendees from Humanity Founders so that we can issue passes.",
+          "daysAgo": 3,
+          "time": "15:30",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a1-013",
+      "accountKey": "a1",
+      "subject": "Reminder: submit Q3 expense reports",
+      "expectedLabel": "assistant_reply",
+      "tags": [
+        "action_required"
+      ],
+      "assignedTo": "AST-104",
+      "isUnread": false,
+      "isStarred": false,
+      "dueInDays": 4,
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Finance Desk",
+            "email": "finance-noreply@humanityfounders.demo"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "body": "Your Q3 expense reports are pending submission. Please submit them by the 20th.",
+          "daysAgo": 3,
+          "time": "09:00",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a1-014",
+      "accountKey": "a1",
+      "subject": "Q4 furniture quote for the new studio",
+      "expectedLabel": "assistant_reply",
+      "tags": [],
+      "assignedTo": "AST-101",
+      "isUnread": false,
+      "isStarred": false,
+      "demo": "reclassify_demo: simulate sim-01, label should move to client_reply",
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Urban Spaces Furniture",
+            "email": "sales@urbanspaces.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "body": "Please find our quote for 20 ergonomic chairs and 6 standing desks for the new studio: INR 5,40,000.",
+          "daysAgo": 4,
+          "time": "11:15",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        },
+        {
+          "direction": "out",
+          "from": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "to": {
+            "name": "Urban Spaces Furniture",
+            "email": "sales@urbanspaces.in"
+          },
+          "body": "Thanks. Could you share a volume discount?",
+          "daysAgo": 3,
+          "time": "10:00",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": "AST-101"
+        },
+        {
+          "direction": "in",
+          "from": {
+            "name": "Urban Spaces Furniture",
+            "email": "sales@urbanspaces.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "body": "We can offer 8%, taking it to INR 4,96,800. Please confirm so we can reserve stock.",
+          "daysAgo": 2,
+          "time": "12:40",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a1-015",
+      "accountKey": "a1",
+      "subject": "Fund II side letter: MFN clause",
+      "expectedLabel": "client_reply",
+      "tags": [
+        "important",
+        "action_required"
+      ],
+      "assignedTo": "AST-101",
+      "isUnread": true,
+      "isStarred": true,
+      "dueInDays": 3,
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Dr. Vikram Anand",
+            "email": "vikram@anandventures.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "body": "Rohan, thank you for the term sheet. Our counsel has flagged the MFN clause in the side letter. We would like parity with the other anchor LPs.",
+          "daysAgo": 9,
+          "time": "10:10",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        },
+        {
+          "direction": "out",
+          "from": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "to": {
+            "name": "Dr. Vikram Anand",
+            "email": "vikram@anandventures.in"
+          },
+          "body": "Thank you, Dr. Anand. I have shared this with Rohan and our counsel and will revert shortly.",
+          "daysAgo": 8,
+          "time": "11:00",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": "AST-101"
+        },
+        {
+          "direction": "in",
+          "from": {
+            "name": "Adv. Neha Menon",
+            "email": "neha.menon@desaimenon.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "body": "Summary of the MFN request: it would give Dr. Anand's office the best terms of any LP with a commitment of equal or lower size. This is a common clause but needs a policy decision.",
+          "daysAgo": 6,
+          "time": "16:20",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        },
+        {
+          "direction": "in",
+          "from": {
+            "name": "Dr. Vikram Anand",
+            "email": "vikram@anandventures.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "body": "Following up. We are keen to close the commitment before quarter end.",
+          "daysAgo": 5,
+          "time": "09:45",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        },
+        {
+          "direction": "out",
+          "from": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "to": {
+            "name": "Dr. Vikram Anand",
+            "email": "vikram@anandventures.in"
+          },
+          "body": "Rohan is reviewing the clause with counsel and will respond by Friday.",
+          "daysAgo": 4,
+          "time": "12:10",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": "AST-104"
+        },
+        {
+          "direction": "in",
+          "from": {
+            "name": "Adv. Neha Menon",
+            "email": "neha.menon@desaimenon.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "body": "I have prepared two options: full MFN, or MFN limited to fee terms. Rohan needs to pick one.",
+          "daysAgo": 2,
+          "time": "14:00",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        },
+        {
+          "direction": "in",
+          "from": {
+            "name": "Dr. Vikram Anand",
+            "email": "vikram@anandventures.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "body": "Rohan, we need your decision on the MFN clause by Friday. I would prefer to hear it from you directly.",
+          "daysAgo": 1,
+          "time": "11:30",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": [
+        {
+          "by": "AST-101",
+          "action": "starred",
+          "daysAgo": 1,
+          "time": "12:00"
+        }
+      ]
+    },
+    {
+      "key": "a1-016",
+      "accountKey": "a1",
+      "subject": "Fund II: your view before Thursday's LP call",
+      "expectedLabel": "client_reply",
+      "tags": [
+        "important"
+      ],
+      "assignedTo": "AST-101",
+      "isUnread": true,
+      "isStarred": true,
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Meera Sethi",
+            "email": "meera@sethicapital.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "body": "Rohan, before the LP call I would like your own view on deployment pace. Are you comfortable with 40% deployed by Q1, given the market? I would rather hear it directly from you.",
+          "daysAgo": 1,
+          "time": "18:20",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a1-017",
+      "accountKey": "a1",
+      "subject": "CSR partnership MoU for signature",
+      "expectedLabel": "client_reply",
+      "tags": [
+        "important",
+        "action_required"
+      ],
+      "assignedTo": "AST-103",
+      "isUnread": false,
+      "isStarred": false,
+      "dueInDays": 4,
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Pooja Deshmukh",
+            "email": "pooja@navrachna.org"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "body": "The CSR committee meets on Monday. Please find the final MoU for Rohan's signature. It needs to be signed by him as the authorised signatory.",
+          "daysAgo": 2,
+          "time": "14:10",
+          "attachments": [
+            "Navrachna_MoU_Final.pdf"
+          ],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a1-018",
+      "accountKey": "a1",
+      "subject": "Grant offer: rural livelihoods programme",
+      "expectedLabel": "client_reply",
+      "tags": [
+        "important",
+        "action_required"
+      ],
+      "assignedTo": "AST-103",
+      "isUnread": false,
+      "isStarred": false,
+      "dueInDays": 5,
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Farhan Ali",
+            "email": "farhan@udaanfoundation.org"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "body": "We are pleased to offer a grant of INR 2.5 crore for the rural livelihoods programme. Please confirm Rohan's acceptance by the 20th so we can issue the sanction letter.",
+          "daysAgo": 3,
+          "time": "10:50",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": [
+        {
+          "by": "AST-103",
+          "action": "label_changed",
+          "daysAgo": 3,
+          "time": "12:00",
+          "from": "assistant_reply",
+          "to": "client_reply"
+        }
+      ]
+    },
+    {
+      "key": "a1-019",
+      "accountKey": "a1",
+      "subject": "Quote request: impact investing story",
+      "expectedLabel": "client_reply",
+      "tags": [
+        "important"
+      ],
+      "assignedTo": "AST-103",
+      "isUnread": true,
+      "isStarred": false,
+      "dueInDays": 1,
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Sana Qureshi",
+            "email": "sana@thecapitalpost.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "body": "I am writing about impact investing in India for tomorrow's edition. Could Rohan share a two line quote on why venture studios matter? I need it by 6 PM tomorrow.",
+          "daysAgo": 0,
+          "time": "11:25",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a1-020",
+      "accountKey": "a1",
+      "subject": "Offer letter approval: Head of Impact",
+      "expectedLabel": "client_reply",
+      "tags": [
+        "action_required"
+      ],
+      "assignedTo": "AST-103",
+      "isUnread": false,
+      "isStarred": false,
+      "ownerAction": {
+        "status": "takeover",
+        "note": "Offer approved. 1 January joining is fine. Please send it today and copy me.",
+        "daysAgo": 0,
+        "time": "09:30"
+      },
+      "demo": "client_note_demo: owner took over with a note, AI drafts from it",
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Ananya Rao",
+            "email": "ananya@humanityfounders.demo"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "body": "Attached is the offer letter for Head of Impact (Dr. Sunita Rao), CTC INR 48 LPA, joining 1 January. HR needs Rohan's final approval before we send it.",
+          "daysAgo": 3,
+          "time": "16:45",
+          "attachments": [
+            "Offer_Letter_Head_of_Impact.pdf"
+          ],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": [
+        {
+          "by": "OWN-001",
+          "action": "owner_takeover",
+          "daysAgo": 0,
+          "time": "09:30",
+          "note": "Offer approved. 1 January joining is fine. Please send it today and copy me."
+        }
+      ]
+    },
+    {
+      "key": "a1-021",
+      "accountKey": "a1",
+      "subject": "Can we speak privately about succession?",
+      "expectedLabel": "client_reply",
+      "tags": [
+        "important"
+      ],
+      "assignedTo": "AST-101",
+      "isUnread": true,
+      "isStarred": false,
+      "confidentialCodename": "Board matter",
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Suresh Pillai",
+            "email": "suresh.pillai@boardadvisory.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "body": "Rohan, can we speak privately about succession planning for the studio? I would like to keep it between us for now.",
+          "daysAgo": 1,
+          "time": "19:05",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a1-022",
+      "accountKey": "a1",
+      "subject": "Closing keynote invitation: Singapore, 14 Feb",
+      "expectedLabel": "client_reply",
+      "tags": [
+        "meeting"
+      ],
+      "assignedTo": "AST-101",
+      "isUnread": false,
+      "isStarred": false,
+      "dueInDays": 14,
+      "meeting": {
+        "inDays": 90,
+        "time": "17:00",
+        "title": "Global Impact Forum keynote"
+      },
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Global Impact Forum",
+            "email": "speakers@globalimpactforum.org"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "body": "We would be honoured if Rohan could deliver the closing keynote at the Global Impact Forum in Singapore on 14 Feb. Please confirm directly by the 30th.",
+          "daysAgo": 4,
+          "time": "13:25",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a1-023",
+      "accountKey": "a1",
+      "subject": "Registrar notice: statement on related-party transactions",
+      "expectedLabel": "client_reply",
+      "tags": [
+        "important",
+        "action_required"
+      ],
+      "assignedTo": "AST-101",
+      "isUnread": true,
+      "isStarred": true,
+      "dueInDays": 4,
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Adv. Neha Menon",
+            "email": "neha.menon@desaimenon.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "body": "We have received a notice from the registrar asking for a statement on the studio's related-party transactions. Rohan needs to review and approve our response. The deadline is Friday.",
+          "daysAgo": 1,
+          "time": "12:30",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a1-024",
+      "accountKey": "a1",
+      "subject": "Co-investment in Gramin Health's next round",
+      "expectedLabel": "client_reply",
+      "tags": [
+        "important",
+        "meeting"
+      ],
+      "assignedTo": "AST-101",
+      "isUnread": false,
+      "isStarred": false,
+      "meeting": {
+        "inDays": 5,
+        "time": "11:00",
+        "title": "Call with Horizon CIO (proposed)"
+      },
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Anika Rao",
+            "email": "anika.rao@horizonendowment.org"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "body": "Horizon Endowment would like to co-invest INR 10 crore in Gramin Health's next round. Could Rohan speak with our CIO on Monday? He prefers to discuss it with Rohan directly.",
+          "daysAgo": 2,
+          "time": "15:15",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a1-025",
+      "accountKey": "a1",
+      "subject": "Partner compensation proposals for approval",
+      "expectedLabel": "client_reply",
+      "tags": [
+        "action_required"
+      ],
+      "assignedTo": "AST-101",
+      "isUnread": false,
+      "isStarred": false,
+      "dueInDays": 7,
+      "confidentialCodename": "Compensation",
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Nikhil Arora",
+            "email": "nikhil@humanityfounders.demo"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "body": "The annual partner compensation proposals are ready. I need Rohan's approval before they go to the board compensation committee. Confidential.",
+          "daysAgo": 2,
+          "time": "10:00",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a1-026",
+      "accountKey": "a1",
+      "subject": "Gramin Health runway: bridge round support",
+      "expectedLabel": "client_reply",
+      "tags": [
+        "important"
+      ],
+      "assignedTo": "AST-101",
+      "isUnread": true,
+      "isStarred": false,
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Tanvi Joshi",
+            "email": "tanvi@graminhealth.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "body": "Rohan, runway at Gramin Health is now 4 months. Would you support a bridge round of INR 3 crore from the studio? I would like your view before I approach other investors.",
+          "daysAgo": 1,
+          "time": "17:40",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a1-027",
+      "accountKey": "a1",
+      "subject": "Advisory board invitation: SkillBridge",
+      "expectedLabel": "client_reply",
+      "tags": [],
+      "assignedTo": "AST-101",
+      "isUnread": false,
+      "isStarred": false,
+      "ownerAction": {
+        "status": "handled",
+        "note": "",
+        "daysAgo": 1,
+        "time": "18:00"
+      },
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Rakesh Menon",
+            "email": "rakesh@skillbridge.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "body": "SkillBridge would like to invite Rohan to join its advisory board. Please let me know if he is open to a short call.",
+          "daysAgo": 5,
+          "time": "11:20",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": [
+        {
+          "by": "OWN-001",
+          "action": "owner_handled",
+          "daysAgo": 1,
+          "time": "18:00"
+        }
+      ]
+    },
+    {
+      "key": "a1-028",
+      "accountKey": "a1",
+      "subject": "This week in impact investing",
+      "expectedLabel": "no_reply",
+      "tags": [
+        "general"
+      ],
+      "assignedTo": "AST-101",
+      "isUnread": false,
+      "isStarred": false,
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Impact Investor Weekly",
+            "email": "news@impactinvestorweekly.com"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "body": "Fund closes, new SDG-linked bonds and what LPs want from emerging managers. Read online. Unsubscribe.",
+          "daysAgo": 1,
+          "time": "07:00",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a1-029",
+      "accountKey": "a1",
+      "subject": "Venture Digest: Q4 deal flow",
+      "expectedLabel": "no_reply",
+      "tags": [
+        "general"
+      ],
+      "assignedTo": "AST-101",
+      "isUnread": false,
+      "isStarred": false,
+      "isArchived": true,
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Venture Digest",
+            "email": "hello@venturedigest.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "body": "India venture funding in Q4, top 10 deals and sector breakdown. Read online.",
+          "daysAgo": 2,
+          "time": "07:10",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": [
+        {
+          "by": "AST-101",
+          "action": "archived",
+          "daysAgo": 2,
+          "time": "10:00"
+        }
+      ]
+    },
+    {
+      "key": "a1-030",
+      "accountKey": "a1",
+      "subject": "Hiring your first 10 employees",
+      "expectedLabel": "no_reply",
+      "tags": [
+        "general"
+      ],
+      "assignedTo": "AST-101",
+      "isUnread": false,
+      "isStarred": false,
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "The Founder Letter",
+            "email": "letter@founderletter.co"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "body": "A practical guide on hiring, equity and culture for early stage teams.",
+          "daysAgo": 3,
+          "time": "06:50",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a1-031",
+      "accountKey": "a1",
+      "subject": "CSR spending reaches record high",
+      "expectedLabel": "no_reply",
+      "tags": [
+        "general"
+      ],
+      "assignedTo": "AST-101",
+      "isUnread": false,
+      "isStarred": false,
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Social Capital India Brief",
+            "email": "brief@socialcapitalindia.org"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "body": "A look at CSR allocations, new compliance rules and top programmes this year.",
+          "daysAgo": 1,
+          "time": "08:15",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a1-032",
+      "accountKey": "a1",
+      "subject": "Booking confirmed: Bengaluru to Delhi, Tuesday",
+      "expectedLabel": "no_reply",
+      "tags": [
+        "meeting"
+      ],
+      "assignedTo": "AST-101",
+      "isUnread": false,
+      "isStarred": false,
+      "meeting": {
+        "inDays": 2,
+        "time": "07:15",
+        "title": "Flight 6E 204 BLR to DEL"
+      },
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "IndiGo",
+            "email": "noreply@goindigo.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "body": "Flight 6E 204, Bengaluru to Delhi, departs 07:15. PNR X7K2LM.",
+          "daysAgo": 2,
+          "time": "06:20",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a1-033",
+      "accountKey": "a1",
+      "subject": "Your cloud recording is ready",
+      "expectedLabel": "no_reply",
+      "tags": [
+        "general"
+      ],
+      "assignedTo": "AST-101",
+      "isUnread": false,
+      "isStarred": false,
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Zoom",
+            "email": "no-reply@zoom.us"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "body": "The cloud recording for Operating Review is now available to view and download.",
+          "daysAgo": 1,
+          "time": "19:00",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a1-034",
+      "accountKey": "a1",
+      "subject": "Your daily digest from #fund-ops",
+      "expectedLabel": "no_reply",
+      "tags": [
+        "general"
+      ],
+      "assignedTo": "AST-104",
+      "isUnread": false,
+      "isStarred": false,
+      "isArchived": true,
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Slack",
+            "email": "feedback@slack.com"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "body": "12 new messages and 3 mentions in #fund-ops.",
+          "daysAgo": 1,
+          "time": "07:30",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": [
+        {
+          "by": "AST-104",
+          "action": "archived",
+          "daysAgo": 1,
+          "time": "11:00"
+        }
+      ]
+    },
+    {
+      "key": "a1-035",
+      "accountKey": "a1",
+      "subject": "Accepted: Fund II LP call",
+      "expectedLabel": "no_reply",
+      "tags": [
+        "meeting"
+      ],
+      "assignedTo": "AST-101",
+      "isUnread": false,
+      "isStarred": false,
+      "meeting": {
+        "inDays": 3,
+        "time": "16:00",
+        "title": "Fund II LP call"
+      },
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Outlook Calendar",
+            "email": "calendar@outlook.com"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "body": "Meera Sethi accepted: Fund II LP call, Thursday 4:00 PM to 5:00 PM IST.",
+          "daysAgo": 1,
+          "time": "17:10",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a1-036",
+      "accountKey": "a1",
+      "subject": "Accepted: Investment committee",
+      "expectedLabel": "no_reply",
+      "tags": [
+        "meeting"
+      ],
+      "assignedTo": "AST-101",
+      "isUnread": false,
+      "isStarred": false,
+      "meeting": {
+        "inDays": 5,
+        "time": "10:00",
+        "title": "Investment committee"
+      },
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Outlook Calendar",
+            "email": "calendar@outlook.com"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "body": "Nikhil Arora accepted: Investment committee, Monday 10:00 AM to 12:00 PM IST.",
+          "daysAgo": 2,
+          "time": "09:30",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a1-037",
+      "accountKey": "a1",
+      "subject": "Declined: Operating review (Friday)",
+      "expectedLabel": "no_reply",
+      "tags": [
+        "meeting"
+      ],
+      "assignedTo": "AST-101",
+      "isUnread": false,
+      "isStarred": false,
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Outlook Calendar",
+            "email": "calendar@outlook.com"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "body": "Shalini Gupta declined: Operating review, Friday 3:00 PM. She will share written updates.",
+          "daysAgo": 2,
+          "time": "18:30",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a1-038",
+      "accountKey": "a1",
+      "subject": "Completed: Vendor NDA signed by all parties",
+      "expectedLabel": "no_reply",
+      "tags": [
+        "important"
+      ],
+      "assignedTo": "AST-101",
+      "isUnread": false,
+      "isStarred": false,
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "DocuSign",
+            "email": "dse@docusign.net"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "body": "All parties have signed the Vendor NDA. A completed copy is attached.",
+          "daysAgo": 2,
+          "time": "12:20",
+          "attachments": [
+            "Vendor_NDA_Completed.pdf"
+          ],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a1-039",
+      "accountKey": "a1",
+      "subject": "New sign-in to your account",
+      "expectedLabel": "no_reply",
+      "tags": [
+        "important"
+      ],
+      "assignedTo": "AST-101",
+      "isUnread": false,
+      "isStarred": false,
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Microsoft 365",
+            "email": "account-security-noreply@accountprotection.microsoft.com"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "body": "A new sign-in was detected on a Windows device in Bengaluru. If this was you, no action is needed.",
+          "daysAgo": 2,
+          "time": "22:05",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a1-040",
+      "accountKey": "a1",
+      "subject": "Application received: Innovation Grant 2026",
+      "expectedLabel": "no_reply",
+      "tags": [
+        "general"
+      ],
+      "assignedTo": "AST-101",
+      "isUnread": false,
+      "isStarred": false,
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "State Innovation Mission Portal",
+            "email": "noreply@stateinnovationmission.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "body": "We have received your application. Reference number SIM-2026-4471. You will be notified of the outcome by email.",
+          "daysAgo": 4,
+          "time": "10:30",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a1-041",
+      "accountKey": "a1",
+      "subject": "You appeared in 12 searches this week",
+      "expectedLabel": "no_reply",
+      "tags": [
+        "general"
+      ],
+      "assignedTo": "AST-101",
+      "isUnread": false,
+      "isStarred": false,
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "LinkedIn",
+            "email": "notifications@linkedin.com"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "body": "See who is looking at your profile.",
+          "daysAgo": 1,
+          "time": "06:40",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a1-042",
+      "accountKey": "a1",
+      "subject": "Venue deposit paid: all set",
+      "expectedLabel": "no_reply",
+      "tags": [
+        "general"
+      ],
+      "assignedTo": "AST-104",
+      "isUnread": false,
+      "isStarred": false,
+      "isCompleted": true,
+      "demo": "resolved_thread",
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "The Orchid Convention Centre",
+            "email": "events@orchidconvention.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "body": "We have received the deposit of INR 1,00,000 for Demo Day. Receipt attached.",
+          "daysAgo": 7,
+          "time": "10:00",
+          "attachments": [
+            "Receipt_DemoDay.pdf"
+          ],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        },
+        {
+          "direction": "out",
+          "from": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "to": {
+            "name": "The Orchid Convention Centre",
+            "email": "events@orchidconvention.in"
+          },
+          "body": "Thank you. Please send the final invoice once the booking is locked.",
+          "daysAgo": 6,
+          "time": "11:15",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": "AST-104"
+        },
+        {
+          "direction": "in",
+          "from": {
+            "name": "The Orchid Convention Centre",
+            "email": "events@orchidconvention.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "body": "Done. Everything is confirmed on our side. Thanks, all set!",
+          "daysAgo": 5,
+          "time": "14:30",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": [
+        {
+          "by": "AST-104",
+          "action": "marked_completed",
+          "daysAgo": 5,
+          "time": "16:00"
+        }
+      ]
+    },
+    {
+      "key": "a1-043",
+      "accountKey": "a1",
+      "subject": "Offsite agenda: final version",
+      "expectedLabel": "no_reply",
+      "tags": [
+        "general"
+      ],
+      "assignedTo": "AST-101",
+      "isUnread": false,
+      "isStarred": false,
+      "isArchived": true,
+      "isCompleted": true,
+      "demo": "resolved_thread",
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Karthik Rao",
+            "email": "karthik@humanityfounders.demo"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "body": "Sharing the final offsite agenda for 5 to 7 Dec.",
+          "daysAgo": 6,
+          "time": "09:20",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        },
+        {
+          "direction": "out",
+          "from": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "to": {
+            "name": "Karthik Rao",
+            "email": "karthik@humanityfounders.demo"
+          },
+          "body": "Thanks, circulated to the team.",
+          "daysAgo": 5,
+          "time": "10:10",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": "AST-101"
+        },
+        {
+          "direction": "in",
+          "from": {
+            "name": "Karthik Rao",
+            "email": "karthik@humanityfounders.demo"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "body": "Perfect, thanks. Nothing more from my side!",
+          "daysAgo": 4,
+          "time": "11:00",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": [
+        {
+          "by": "AST-101",
+          "action": "marked_completed",
+          "daysAgo": 4,
+          "time": "12:00"
+        },
+        {
+          "by": "AST-101",
+          "action": "archived",
+          "daysAgo": 4,
+          "time": "12:05"
+        }
+      ]
+    },
+    {
+      "key": "a1-044",
+      "accountKey": "a1",
+      "subject": "SkillBridge monthly update (FYI)",
+      "expectedLabel": "no_reply",
+      "tags": [
+        "general"
+      ],
+      "assignedTo": "AST-101",
+      "isUnread": false,
+      "isStarred": false,
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Rakesh Menon",
+            "email": "rakesh@skillbridge.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "body": "Monthly update: revenue up 12%, two new employer partnerships, no action needed. Sharing for visibility.",
+          "daysAgo": 3,
+          "time": "18:00",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a1-045",
+      "accountKey": "a1",
+      "subject": "Grant award notification: verify bank details to receive USD 250,000",
+      "expectedLabel": "no_reply",
+      "tags": [
+        "general"
+      ],
+      "assignedTo": "AST-101",
+      "isUnread": false,
+      "isStarred": false,
+      "isPhishing": true,
+      "demo": "phishing",
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Global Impact Grants Committee",
+            "email": "award@global-impact-grants-intl.com"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "body": "Congratulations! Your organisation has been selected for a USD 250,000 award. To release funds, reply with your bank account number, IFSC and a copy of your ID within 24 hours.",
+          "daysAgo": 1,
+          "time": "03:15",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a1-046",
+      "accountKey": "a1",
+      "subject": "Your mailbox will be deactivated today",
+      "expectedLabel": "no_reply",
+      "tags": [
+        "general"
+      ],
+      "assignedTo": "AST-101",
+      "isUnread": false,
+      "isStarred": false,
+      "isPhishing": true,
+      "demo": "phishing",
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Microsoft 365 Support",
+            "email": "no-reply@m1crosoft-support.co"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "body": "Your mailbox storage is full. Click the link below to verify your password immediately or your account will be deactivated.",
+          "daysAgo": 1,
+          "time": "04:40",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a1-047",
+      "accountKey": "a1",
+      "subject": "URGENT: Your licence expires tonight",
+      "expectedLabel": "no_reply",
+      "tags": [
+        "general"
+      ],
+      "assignedTo": "AST-101",
+      "isUnread": false,
+      "isStarred": false,
+      "demo": "tricky: sounds urgent but needs no reply",
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "CloudSuite Sales",
+            "email": "offers@cloudsuite-deals.com"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "body": "Your trial expires tonight. Upgrade now to keep your data. Limited offer, 60% off for the next 3 hours.",
+          "daysAgo": 1,
+          "time": "05:30",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a1-048",
+      "accountKey": "a1",
+      "subject": "Fwd: Thoughts?",
+      "expectedLabel": "needs_review",
+      "tags": [],
+      "assignedTo": "AST-101",
+      "isUnread": true,
+      "isStarred": false,
+      "demo": "forwarded and ambiguous",
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Shalini Gupta",
+            "email": "shalini@humanityfounders.demo"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "body": "Forwarding this without context. Thoughts?",
+          "daysAgo": 1,
+          "time": "20:10",
+          "attachments": [
+            "Partner_Proposal.pdf"
+          ],
+          "cc": [],
+          "isForwarded": true,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a1-049",
+      "accountKey": "a1",
+      "subject": "Can we sync before Monday?",
+      "expectedLabel": "needs_review",
+      "tags": [],
+      "assignedTo": "AST-104",
+      "isUnread": false,
+      "isStarred": false,
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Karthik Rao",
+            "email": "karthik@humanityfounders.demo"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "body": "Can we sync before Monday? Something has come up and I want to run it by you.",
+          "daysAgo": 2,
+          "time": "19:20",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a1-050",
+      "accountKey": "a1",
+      "subject": "Following up on our chat at the summit",
+      "expectedLabel": "needs_review",
+      "tags": [],
+      "assignedTo": "AST-103",
+      "isUnread": false,
+      "isStarred": false,
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Rajiv Khanna",
+            "email": "rajiv@khannaassociates.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "body": "It was great meeting you at the summit. Would love to explore how we can work together.",
+          "daysAgo": 3,
+          "time": "12:30",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a1-051",
+      "accountKey": "a1",
+      "subject": "Revised numbers attached",
+      "expectedLabel": "needs_review",
+      "tags": [],
+      "assignedTo": "AST-101",
+      "isUnread": true,
+      "isStarred": false,
+      "demo": "low_confidence: one word body",
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Nikhil Arora",
+            "email": "nikhil@humanityfounders.demo"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "body": "Attached.",
+          "daysAgo": 1,
+          "time": "21:00",
+          "attachments": [
+            "Revised_Budget_Q4.xlsx"
+          ],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a1-052",
+      "accountKey": "a1",
+      "subject": "Re: Next steps",
+      "expectedLabel": "needs_review",
+      "tags": [],
+      "assignedTo": "AST-101",
+      "isUnread": false,
+      "isStarred": false,
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Meera Sethi",
+            "email": "meera@sethicapital.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "body": "Let me know what you think of the next steps we discussed.",
+          "daysAgo": 2,
+          "time": "16:00",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a1-053",
+      "accountKey": "a1",
+      "subject": "Fund II audit: documents submitted",
+      "expectedLabel": "no_reply",
+      "tags": [
+        "waiting_for_response",
+        "important"
+      ],
+      "assignedTo": "AST-101",
+      "isUnread": false,
+      "isStarred": false,
+      "demo": "waiting_aging: 2 follow-ups already sent, suggest escalate",
+      "messages": [
+        {
+          "direction": "out",
+          "from": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "to": {
+            "name": "Bansal Audit Partners",
+            "email": "audit@bansalaudit.in"
+          },
+          "body": "Sharing the Fund II documents for the annual audit. Please confirm receipt.",
+          "daysAgo": 11,
+          "time": "10:30",
+          "attachments": [
+            "Fund_II_Audit_Docs.zip"
+          ],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": "AST-101"
+        },
+        {
+          "direction": "out",
+          "from": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "to": {
+            "name": "Bansal Audit Partners",
+            "email": "audit@bansalaudit.in"
+          },
+          "body": "Following up on the audit documents shared last week. Could you confirm receipt?",
+          "daysAgo": 8,
+          "time": "11:00",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": "AST-101"
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a1-054",
+      "accountKey": "a1",
+      "subject": "Demo Day invoice: awaiting from venue",
+      "expectedLabel": "no_reply",
+      "tags": [
+        "waiting_for_response"
+      ],
+      "assignedTo": "AST-104",
+      "isUnread": false,
+      "isStarred": false,
+      "messages": [
+        {
+          "direction": "out",
+          "from": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "to": {
+            "name": "The Orchid Convention Centre",
+            "email": "events@orchidconvention.in"
+          },
+          "body": "Could you please send the final invoice for Demo Day?",
+          "daysAgo": 3,
+          "time": "15:20",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": "AST-104"
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a1-055",
+      "accountKey": "a1",
+      "subject": "CSR partner introduction: awaiting reply",
+      "expectedLabel": "no_reply",
+      "tags": [
+        "waiting_for_response"
+      ],
+      "assignedTo": "AST-103",
+      "isUnread": false,
+      "isStarred": false,
+      "messages": [
+        {
+          "direction": "out",
+          "from": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "to": {
+            "name": "Pooja Deshmukh",
+            "email": "pooja@navrachna.org"
+          },
+          "body": "Rohan would be happy to be introduced to your trustees. Please share two time slots.",
+          "daysAgo": 5,
+          "time": "12:45",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": "AST-103"
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a1-056",
+      "accountKey": "a1",
+      "subject": "Insurance renewal quote",
+      "expectedLabel": "no_reply",
+      "tags": [
+        "waiting_for_response"
+      ],
+      "assignedTo": "AST-104",
+      "isUnread": false,
+      "isStarred": false,
+      "dueInDays": 5,
+      "messages": [
+        {
+          "direction": "out",
+          "from": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "to": {
+            "name": "SecureShield Insurance",
+            "email": "quotes@secureshield.in"
+          },
+          "body": "Please share the renewal quote for the studio's office insurance policy.",
+          "daysAgo": 12,
+          "time": "10:00",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": "AST-104"
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a1-057",
+      "accountKey": "a1",
+      "subject": "Auditor engagement letter",
+      "expectedLabel": "no_reply",
+      "tags": [
+        "waiting_for_response"
+      ],
+      "assignedTo": "AST-101",
+      "isUnread": false,
+      "isStarred": false,
+      "messages": [
+        {
+          "direction": "out",
+          "from": {
+            "name": "Rohan Kapoor",
+            "email": "rohan@humanityfounders.demo"
+          },
+          "to": {
+            "name": "Bansal Audit Partners",
+            "email": "audit@bansalaudit.in"
+          },
+          "body": "Please send the signed engagement letter for the next audit cycle.",
+          "daysAgo": 6,
+          "time": "16:30",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": "AST-101"
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a2-001",
+      "accountKey": "a2",
+      "subject": "Sandbox login for our associate",
+      "expectedLabel": "assistant_reply",
+      "tags": [
+        "action_required"
+      ],
+      "assignedTo": "AST-102",
+      "isUnread": true,
+      "isStarred": false,
+      "confidentialCodename": "Project Aarambh",
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Sameer Joshi",
+            "email": "sameer@lakeviewcapital.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "ventures@humanityfounders.demo"
+          },
+          "body": "Could your team set up a sandbox login for our associate to try the Aarambh demo environment before the partner meeting?",
+          "daysAgo": 1,
+          "time": "11:10",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a2-002",
+      "accountKey": "a2",
+      "subject": "setu.demo domain expires in 14 days",
+      "expectedLabel": "assistant_reply",
+      "tags": [
+        "action_required"
+      ],
+      "assignedTo": "AST-102",
+      "isUnread": false,
+      "isStarred": false,
+      "dueInDays": 14,
+      "confidentialCodename": "Project Setu",
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "RegistrarOne",
+            "email": "alerts@registrarone.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "ventures@humanityfounders.demo"
+          },
+          "body": "Your domain setu.demo will expire in 14 days. Renew now to avoid interruption to email and website.",
+          "daysAgo": 3,
+          "time": "08:00",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a2-003",
+      "accountKey": "a2",
+      "subject": "First board meeting: week of 7 Dec",
+      "expectedLabel": "assistant_reply",
+      "tags": [
+        "meeting"
+      ],
+      "assignedTo": "AST-103",
+      "isUnread": false,
+      "isStarred": false,
+      "meeting": {
+        "inDays": 21,
+        "time": "15:00",
+        "title": "Project Setu board meeting (proposed)"
+      },
+      "confidentialCodename": "Project Setu",
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Divya Nambiar",
+            "email": "divya@projectsetu.demo"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "ventures@humanityfounders.demo"
+          },
+          "body": "Can we schedule the first board meeting for Project Setu in the week of 7 Dec? Please share Rohan's availability.",
+          "daysAgo": 2,
+          "time": "13:40",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a2-004",
+      "accountKey": "a2",
+      "subject": "Standard NDA for advisor onboarding",
+      "expectedLabel": "assistant_reply",
+      "tags": [],
+      "assignedTo": "AST-102",
+      "isUnread": false,
+      "isStarred": false,
+      "confidentialCodename": "Project Vistaar",
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Dev Shah",
+            "email": "dev.shah@advisors.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "ventures@humanityfounders.demo"
+          },
+          "body": "Could you send the standard NDA template? Rohan said we can proceed once it is signed.",
+          "daysAgo": 2,
+          "time": "10:20",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a2-005",
+      "accountKey": "a2",
+      "subject": "Engineer finalists: culture interviews",
+      "expectedLabel": "assistant_reply",
+      "tags": [
+        "meeting",
+        "action_required"
+      ],
+      "assignedTo": "AST-104",
+      "isUnread": false,
+      "isStarred": false,
+      "confidentialCodename": "Project Aarambh",
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Ananya Rao",
+            "email": "ananya@humanityfounders.demo"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "ventures@humanityfounders.demo"
+          },
+          "body": "We have three engineer finalists for Aarambh. Please share Rohan's slots for 30 minute culture interviews.",
+          "daysAgo": 1,
+          "time": "15:50",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a2-006",
+      "accountKey": "a2",
+      "subject": "KYC documents for payroll vendor setup",
+      "expectedLabel": "assistant_reply",
+      "tags": [
+        "action_required"
+      ],
+      "assignedTo": "AST-104",
+      "isUnread": false,
+      "isStarred": false,
+      "dueInDays": 6,
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "PayStack India",
+            "email": "onboarding@paystackindia.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "ventures@humanityfounders.demo"
+          },
+          "body": "Please share the KYC documents for the studio entity to complete payroll vendor setup.",
+          "daysAgo": 4,
+          "time": "11:30",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a2-007",
+      "accountKey": "a2",
+      "subject": "Shared drive access for legal counsel",
+      "expectedLabel": "assistant_reply",
+      "tags": [],
+      "assignedTo": "AST-102",
+      "isUnread": false,
+      "isStarred": false,
+      "confidentialCodename": "Project Aarambh",
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Karan Mehra",
+            "email": "karan@projectaarambh.demo"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "ventures@humanityfounders.demo"
+          },
+          "body": "Can you give our legal counsel access to the Aarambh shared drive? Read only is fine.",
+          "daysAgo": 2,
+          "time": "16:10",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a2-008",
+      "accountKey": "a2",
+      "subject": "Incorporation documents: courier address",
+      "expectedLabel": "assistant_reply",
+      "tags": [
+        "action_required"
+      ],
+      "assignedTo": "AST-102",
+      "isUnread": true,
+      "isStarred": false,
+      "confidentialCodename": "Project Vistaar",
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Adv. Neha Menon",
+            "email": "neha.menon@desaimenon.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "ventures@humanityfounders.demo"
+          },
+          "body": "The signed incorporation documents for Project Vistaar are ready. Where should we courier the originals?",
+          "daysAgo": 1,
+          "time": "12:00",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a2-009",
+      "accountKey": "a2",
+      "subject": "Aarambh seed round: term sheet and CTO equity",
+      "expectedLabel": "client_reply",
+      "tags": [
+        "important",
+        "action_required"
+      ],
+      "assignedTo": "AST-102",
+      "isUnread": true,
+      "isStarred": true,
+      "dueInDays": 2,
+      "confidentialCodename": "Project Aarambh",
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Sameer Joshi",
+            "email": "sameer@lakeviewcapital.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "ventures@humanityfounders.demo"
+          },
+          "body": "Sharing Lakeview's term sheet for the Aarambh seed round. We propose USD 1.8M at USD 9M pre-money.",
+          "daysAgo": 10,
+          "time": "10:00",
+          "attachments": [
+            "Aarambh_Term_Sheet.pdf"
+          ],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        },
+        {
+          "direction": "out",
+          "from": {
+            "name": "Rohan Kapoor",
+            "email": "ventures@humanityfounders.demo"
+          },
+          "to": {
+            "name": "Sameer Joshi",
+            "email": "sameer@lakeviewcapital.in"
+          },
+          "body": "Received, thank you Sameer. Rohan will review it with the team.",
+          "daysAgo": 9,
+          "time": "11:20",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": "AST-102"
+        },
+        {
+          "direction": "in",
+          "from": {
+            "name": "Karan Mehra",
+            "email": "karan@projectaarambh.demo"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "ventures@humanityfounders.demo"
+          },
+          "body": "Rohan, I am concerned about the 9M pre-money. We should push for 11M. The CTO question is also still open.",
+          "daysAgo": 7,
+          "time": "14:30",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        },
+        {
+          "direction": "out",
+          "from": {
+            "name": "Rohan Kapoor",
+            "email": "ventures@humanityfounders.demo"
+          },
+          "to": {
+            "name": "Karan Mehra",
+            "email": "karan@projectaarambh.demo"
+          },
+          "body": "Noted. I have put 30 minutes on Rohan's calendar with you on Friday.",
+          "daysAgo": 6,
+          "time": "10:15",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": "AST-104"
+        },
+        {
+          "direction": "in",
+          "from": {
+            "name": "Adv. Neha Menon",
+            "email": "neha.menon@desaimenon.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "ventures@humanityfounders.demo"
+          },
+          "body": "Legal view: the liquidation preference and board composition are standard. Pre-money is a business call.",
+          "daysAgo": 5,
+          "time": "16:40",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        },
+        {
+          "direction": "in",
+          "from": {
+            "name": "Ishaan Verma",
+            "email": "ishaan.verma@protonmail.com"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "ventures@humanityfounders.demo"
+          },
+          "body": "Hi Rohan, happy to join as CTO. I would like 12% equity with 3 year vesting and the 6 month cliff waived.",
+          "daysAgo": 3,
+          "time": "09:30",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        },
+        {
+          "direction": "in",
+          "from": {
+            "name": "Karan Mehra",
+            "email": "karan@projectaarambh.demo"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "ventures@humanityfounders.demo"
+          },
+          "body": "Ishaan's ask is high but he is the best candidate. Rohan, we need your call on the equity before Lakeview's deadline.",
+          "daysAgo": 2,
+          "time": "12:50",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        },
+        {
+          "direction": "in",
+          "from": {
+            "name": "Sameer Joshi",
+            "email": "sameer@lakeviewcapital.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "ventures@humanityfounders.demo"
+          },
+          "body": "Reminder: our offer is valid till Friday. Please let us know if you would like to proceed or counter.",
+          "daysAgo": 1,
+          "time": "10:40",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": [
+        {
+          "by": "AST-102",
+          "action": "starred",
+          "daysAgo": 1,
+          "time": "11:15"
+        }
+      ]
+    },
+    {
+      "key": "a2-010",
+      "accountKey": "a2",
+      "subject": "Call with Rohan before I accept",
+      "expectedLabel": "client_reply",
+      "tags": [
+        "important"
+      ],
+      "assignedTo": "AST-102",
+      "isUnread": true,
+      "isStarred": false,
+      "confidentialCodename": "Project Aarambh",
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Ishaan Verma",
+            "email": "ishaan.verma@protonmail.com"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "ventures@humanityfounders.demo"
+          },
+          "body": "Rohan, before I accept, I would like a call with you directly to discuss the vision and my equity. I am comfortable discussing this only with you.",
+          "daysAgo": 1,
+          "time": "20:15",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a2-011",
+      "accountKey": "a2",
+      "subject": "Setu: pivot to B2B payroll?",
+      "expectedLabel": "client_reply",
+      "tags": [
+        "important"
+      ],
+      "assignedTo": "AST-103",
+      "isUnread": false,
+      "isStarred": false,
+      "confidentialCodename": "Project Setu",
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Divya Nambiar",
+            "email": "divya@projectsetu.demo"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "ventures@humanityfounders.demo"
+          },
+          "body": "We have strong pull from two employers for a B2B payroll product. Do we pivot Setu's roadmap? I need Rohan's decision before the product freeze.",
+          "daysAgo": 2,
+          "time": "11:45",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a2-012",
+      "accountKey": "a2",
+      "subject": "IP assignment agreement for signature",
+      "expectedLabel": "client_reply",
+      "tags": [
+        "action_required",
+        "important"
+      ],
+      "assignedTo": "AST-102",
+      "isUnread": false,
+      "isStarred": false,
+      "dueInDays": 3,
+      "confidentialCodename": "Project Vistaar",
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Adv. Neha Menon",
+            "email": "neha.menon@desaimenon.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "ventures@humanityfounders.demo"
+          },
+          "body": "The IP assignment agreement for Project Vistaar needs Rohan's signature as the studio's authorised signatory.",
+          "daysAgo": 3,
+          "time": "15:00",
+          "attachments": [
+            "Vistaar_IP_Assignment.pdf"
+          ],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a2-013",
+      "accountKey": "a2",
+      "subject": "Head of Product offer for Setu",
+      "expectedLabel": "client_reply",
+      "tags": [
+        "action_required"
+      ],
+      "assignedTo": "AST-103",
+      "isUnread": false,
+      "isStarred": false,
+      "confidentialCodename": "Project Setu",
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Divya Nambiar",
+            "email": "divya@projectsetu.demo"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "ventures@humanityfounders.demo"
+          },
+          "body": "I would like to offer Priya Nair the Head of Product role at INR 36 LPA. This needs Rohan's approval.",
+          "daysAgo": 4,
+          "time": "12:20",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": [
+        {
+          "by": "AST-103",
+          "action": "label_changed",
+          "daysAgo": 4,
+          "time": "14:00",
+          "from": "assistant_reply",
+          "to": "client_reply"
+        }
+      ]
+    },
+    {
+      "key": "a2-014",
+      "accountKey": "a2",
+      "subject": "Meeting the Setu founders",
+      "expectedLabel": "client_reply",
+      "tags": [
+        "important"
+      ],
+      "assignedTo": "AST-102",
+      "isUnread": false,
+      "isStarred": false,
+      "confidentialCodename": "Project Setu",
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Prof. Leela Ramaswamy",
+            "email": "leela.ramaswamy@advisors.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "ventures@humanityfounders.demo"
+          },
+          "body": "I would like to meet the Setu founders. As Setu is in stealth, I will only reach out with your explicit go-ahead.",
+          "daysAgo": 2,
+          "time": "09:50",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a2-015",
+      "accountKey": "a2",
+      "subject": "Co-founder disagreement: please mediate",
+      "expectedLabel": "client_reply",
+      "tags": [
+        "important"
+      ],
+      "assignedTo": "AST-102",
+      "isUnread": true,
+      "isStarred": true,
+      "confidentialCodename": "Project Vistaar",
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Anil Desai",
+            "email": "anil@projectvistaar.demo"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "ventures@humanityfounders.demo"
+          },
+          "body": "Two Vistaar co-founders disagree on their roles. I would like Rohan to mediate personally.",
+          "daysAgo": 1,
+          "time": "18:30",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a2-016",
+      "accountKey": "a2",
+      "subject": "Setu bridge note: INR 2 crore",
+      "expectedLabel": "client_reply",
+      "tags": [
+        "important",
+        "action_required"
+      ],
+      "assignedTo": "AST-103",
+      "isUnread": false,
+      "isStarred": false,
+      "dueInDays": 6,
+      "confidentialCodename": "Project Setu",
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Ritu Sharma",
+            "email": "ritu@projectsetu.demo"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "ventures@humanityfounders.demo"
+          },
+          "body": "Setu's cash will last till March. Would the studio provide INR 2 crore as a convertible note? Needs Rohan's approval.",
+          "daysAgo": 3,
+          "time": "10:10",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a2-017",
+      "accountKey": "a2",
+      "subject": "Stealth reveal date: 15 Jan",
+      "expectedLabel": "client_reply",
+      "tags": [],
+      "assignedTo": "AST-102",
+      "isUnread": false,
+      "isStarred": false,
+      "confidentialCodename": "Project Aarambh",
+      "ownerAction": {
+        "status": "handled",
+        "note": "",
+        "daysAgo": 2,
+        "time": "17:20"
+      },
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Karan Mehra",
+            "email": "karan@projectaarambh.demo"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "ventures@humanityfounders.demo"
+          },
+          "body": "Marketing proposes 15 Jan for the Aarambh stealth reveal. Rohan, are you comfortable with the date?",
+          "daysAgo": 4,
+          "time": "13:10",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": [
+        {
+          "by": "OWN-001",
+          "action": "owner_handled",
+          "daysAgo": 2,
+          "time": "17:20"
+        }
+      ]
+    },
+    {
+      "key": "a2-018",
+      "accountKey": "a2",
+      "subject": "Carry pool split for the Vistaar team",
+      "expectedLabel": "client_reply",
+      "tags": [
+        "action_required"
+      ],
+      "assignedTo": "AST-102",
+      "isUnread": false,
+      "isStarred": false,
+      "dueInDays": 5,
+      "confidentialCodename": "Project Vistaar",
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Nikhil Arora",
+            "email": "nikhil@humanityfounders.demo"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "ventures@humanityfounders.demo"
+          },
+          "body": "The proposal for the carry pool split among the Vistaar team is attached. Rohan needs to approve it.",
+          "daysAgo": 6,
+          "time": "12:00",
+          "attachments": [
+            "Vistaar_Carry_Split.xlsx"
+          ],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a2-019",
+      "accountKey": "a2",
+      "subject": "Your credits have been applied",
+      "expectedLabel": "no_reply",
+      "tags": [
+        "general"
+      ],
+      "assignedTo": "AST-102",
+      "isUnread": false,
+      "isStarred": false,
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Cloud Credits Team",
+            "email": "credits@cloudcredits.io"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "ventures@humanityfounders.demo"
+          },
+          "body": "USD 5,000 in cloud credits have been applied to your account.",
+          "daysAgo": 2,
+          "time": "09:00",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a2-020",
+      "accountKey": "a2",
+      "subject": "A new SSH key was added to your account",
+      "expectedLabel": "no_reply",
+      "tags": [
+        "important"
+      ],
+      "assignedTo": "AST-102",
+      "isUnread": false,
+      "isStarred": false,
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "GitHub",
+            "email": "noreply@github.com"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "ventures@humanityfounders.demo"
+          },
+          "body": "A new SSH key was added to your account. If you did this, no action is needed.",
+          "daysAgo": 1,
+          "time": "23:10",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a2-021",
+      "accountKey": "a2",
+      "subject": "Admin summary for October",
+      "expectedLabel": "no_reply",
+      "tags": [
+        "general"
+      ],
+      "assignedTo": "AST-102",
+      "isUnread": false,
+      "isStarred": false,
+      "isArchived": true,
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Google Workspace",
+            "email": "workspace-noreply@google.com"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "ventures@humanityfounders.demo"
+          },
+          "body": "Your October admin summary: 14 active users, 2 new devices.",
+          "daysAgo": 3,
+          "time": "07:00",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": [
+        {
+          "by": "AST-102",
+          "action": "archived",
+          "daysAgo": 3,
+          "time": "10:00"
+        }
+      ]
+    },
+    {
+      "key": "a2-022",
+      "accountKey": "a2",
+      "subject": "Setu weekly update: FYI",
+      "expectedLabel": "no_reply",
+      "tags": [
+        "general"
+      ],
+      "assignedTo": "AST-102",
+      "isUnread": false,
+      "isStarred": false,
+      "confidentialCodename": "Project Setu",
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Divya Nambiar",
+            "email": "divya@projectsetu.demo"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "ventures@humanityfounders.demo"
+          },
+          "body": "Weekly update: 4 pilot employers signed, onboarding on track. No action needed.",
+          "daysAgo": 2,
+          "time": "18:00",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a2-023",
+      "accountKey": "a2",
+      "subject": "Deep tech funding this quarter",
+      "expectedLabel": "no_reply",
+      "tags": [
+        "general"
+      ],
+      "assignedTo": "AST-102",
+      "isUnread": false,
+      "isStarred": false,
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Deep Tech India Brief",
+            "email": "brief@deeptechindia.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "ventures@humanityfounders.demo"
+          },
+          "body": "Top deep tech rounds, policy updates and what investors are watching.",
+          "daysAgo": 1,
+          "time": "07:20",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a2-024",
+      "accountKey": "a2",
+      "subject": "What makes a seed round close faster",
+      "expectedLabel": "no_reply",
+      "tags": [
+        "general"
+      ],
+      "assignedTo": "AST-102",
+      "isUnread": false,
+      "isStarred": false,
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Seed Stage Weekly",
+            "email": "hello@seedstageweekly.com"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "ventures@humanityfounders.demo"
+          },
+          "body": "Five patterns from 40 recent seed rounds in India.",
+          "daysAgo": 4,
+          "time": "07:15",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a2-025",
+      "accountKey": "a2",
+      "subject": "Completed: Advisor NDA",
+      "expectedLabel": "no_reply",
+      "tags": [
+        "important"
+      ],
+      "assignedTo": "AST-102",
+      "isUnread": false,
+      "isStarred": false,
+      "confidentialCodename": "Project Vistaar",
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "DocuSign",
+            "email": "dse@docusign.net"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "ventures@humanityfounders.demo"
+          },
+          "body": "The Advisor NDA has been signed by all parties.",
+          "daysAgo": 3,
+          "time": "13:30",
+          "attachments": [
+            "Advisor_NDA_Completed.pdf"
+          ],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a2-026",
+      "accountKey": "a2",
+      "subject": "Accepted: Aarambh sync",
+      "expectedLabel": "no_reply",
+      "tags": [
+        "meeting"
+      ],
+      "assignedTo": "AST-102",
+      "isUnread": false,
+      "isStarred": false,
+      "meeting": {
+        "inDays": 3,
+        "time": "11:00",
+        "title": "Aarambh sync"
+      },
+      "confidentialCodename": "Project Aarambh",
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Google Calendar",
+            "email": "calendar-notification@google.com"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "ventures@humanityfounders.demo"
+          },
+          "body": "Karan Mehra accepted: Aarambh sync, Thursday 11:00 AM to 11:30 AM IST.",
+          "daysAgo": 1,
+          "time": "16:00",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a2-027",
+      "accountKey": "a2",
+      "subject": "Accepted: Setu monthly review",
+      "expectedLabel": "no_reply",
+      "tags": [
+        "meeting"
+      ],
+      "assignedTo": "AST-102",
+      "isUnread": false,
+      "isStarred": false,
+      "meeting": {
+        "inDays": 5,
+        "time": "14:00",
+        "title": "Setu monthly review"
+      },
+      "confidentialCodename": "Project Setu",
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Google Calendar",
+            "email": "calendar-notification@google.com"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "ventures@humanityfounders.demo"
+          },
+          "body": "Divya Nambiar accepted: Setu monthly review, Monday 2:00 PM to 3:00 PM IST.",
+          "daysAgo": 2,
+          "time": "15:30",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a2-028",
+      "accountKey": "a2",
+      "subject": "Domain transfer complete",
+      "expectedLabel": "no_reply",
+      "tags": [
+        "general"
+      ],
+      "assignedTo": "AST-102",
+      "isUnread": false,
+      "isStarred": false,
+      "confidentialCodename": "Project Vistaar",
+      "isArchived": true,
+      "isCompleted": true,
+      "demo": "resolved_thread",
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "RegistrarOne",
+            "email": "support@registrarone.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "ventures@humanityfounders.demo"
+          },
+          "body": "The transfer of projectvistaar.demo has been initiated.",
+          "daysAgo": 7,
+          "time": "10:00",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        },
+        {
+          "direction": "out",
+          "from": {
+            "name": "Rohan Kapoor",
+            "email": "ventures@humanityfounders.demo"
+          },
+          "to": {
+            "name": "RegistrarOne",
+            "email": "support@registrarone.in"
+          },
+          "body": "Thanks. Please confirm once it is complete.",
+          "daysAgo": 6,
+          "time": "11:00",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": "AST-102"
+        },
+        {
+          "direction": "in",
+          "from": {
+            "name": "RegistrarOne",
+            "email": "support@registrarone.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "ventures@humanityfounders.demo"
+          },
+          "body": "Transfer complete. Thanks, all done!",
+          "daysAgo": 5,
+          "time": "09:30",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": [
+        {
+          "by": "AST-102",
+          "action": "marked_completed",
+          "daysAgo": 5,
+          "time": "10:30"
+        }
+      ]
+    },
+    {
+      "key": "a2-029",
+      "accountKey": "a2",
+      "subject": "Thoughts on this?",
+      "expectedLabel": "needs_review",
+      "tags": [],
+      "assignedTo": "AST-102",
+      "isUnread": true,
+      "isStarred": false,
+      "confidentialCodename": "Project Setu",
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Divya Nambiar",
+            "email": "divya@projectsetu.demo"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "ventures@humanityfounders.demo"
+          },
+          "body": "Thoughts on this?",
+          "daysAgo": 1,
+          "time": "21:20",
+          "attachments": [
+            "Setu_Pitch_v4.pdf"
+          ],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a2-030",
+      "accountKey": "a2",
+      "subject": "Quick call?",
+      "expectedLabel": "needs_review",
+      "tags": [],
+      "assignedTo": "AST-104",
+      "isUnread": false,
+      "isStarred": false,
+      "confidentialCodename": "Project Aarambh",
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Karan Mehra",
+            "email": "karan@projectaarambh.demo"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "ventures@humanityfounders.demo"
+          },
+          "body": "Do you have a minute? Something to discuss.",
+          "daysAgo": 2,
+          "time": "17:45",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a2-031",
+      "accountKey": "a2",
+      "subject": "Fwd: Competitor raised funding",
+      "expectedLabel": "needs_review",
+      "tags": [],
+      "assignedTo": "AST-102",
+      "isUnread": false,
+      "isStarred": false,
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Nikhil Arora",
+            "email": "nikhil@humanityfounders.demo"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "ventures@humanityfounders.demo"
+          },
+          "body": "Forwarding. Relevant?",
+          "daysAgo": 3,
+          "time": "14:15",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": true,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a2-032",
+      "accountKey": "a2",
+      "subject": "Re: terms",
+      "expectedLabel": "needs_review",
+      "tags": [],
+      "assignedTo": "AST-102",
+      "isUnread": false,
+      "isStarred": false,
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Tara Menon",
+            "email": "tara@lakeviewcapital.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "ventures@humanityfounders.demo"
+          },
+          "body": "Following up on terms. Let us know.",
+          "daysAgo": 2,
+          "time": "11:00",
+          "attachments": [],
+          "cc": [
+            "sameer@lakeviewcapital.in"
+          ],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a2-033",
+      "accountKey": "a2",
+      "subject": "Lakeview: our comments on the term sheet",
+      "expectedLabel": "no_reply",
+      "tags": [
+        "waiting_for_response",
+        "important"
+      ],
+      "assignedTo": "AST-102",
+      "isUnread": false,
+      "isStarred": false,
+      "confidentialCodename": "Project Aarambh",
+      "messages": [
+        {
+          "direction": "out",
+          "from": {
+            "name": "Rohan Kapoor",
+            "email": "ventures@humanityfounders.demo"
+          },
+          "to": {
+            "name": "Sameer Joshi",
+            "email": "sameer@lakeviewcapital.in"
+          },
+          "body": "Sharing our consolidated comments on the Aarambh term sheet. Please review and revert.",
+          "daysAgo": 6,
+          "time": "11:40",
+          "attachments": [
+            "Aarambh_Comments.docx"
+          ],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": "AST-102"
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a2-034",
+      "accountKey": "a2",
+      "subject": "IP assignment: first draft requested",
+      "expectedLabel": "no_reply",
+      "tags": [
+        "waiting_for_response"
+      ],
+      "assignedTo": "AST-104",
+      "isUnread": false,
+      "isStarred": false,
+      "confidentialCodename": "Project Vistaar",
+      "messages": [
+        {
+          "direction": "out",
+          "from": {
+            "name": "Rohan Kapoor",
+            "email": "ventures@humanityfounders.demo"
+          },
+          "to": {
+            "name": "Adv. Neha Menon",
+            "email": "neha.menon@desaimenon.in"
+          },
+          "body": "Could you share the first draft of the IP assignment for Project Vistaar?",
+          "daysAgo": 4,
+          "time": "10:30",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": "AST-104"
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a2-035",
+      "accountKey": "a2",
+      "subject": "Setu: board pack requested",
+      "expectedLabel": "no_reply",
+      "tags": [
+        "waiting_for_response"
+      ],
+      "assignedTo": "AST-103",
+      "isUnread": false,
+      "isStarred": false,
+      "confidentialCodename": "Project Setu",
+      "demo": "waiting_aging: reminder already sent",
+      "messages": [
+        {
+          "direction": "out",
+          "from": {
+            "name": "Rohan Kapoor",
+            "email": "ventures@humanityfounders.demo"
+          },
+          "to": {
+            "name": "Divya Nambiar",
+            "email": "divya@projectsetu.demo"
+          },
+          "body": "Please share the board pack for the first Setu board meeting.",
+          "daysAgo": 9,
+          "time": "12:10",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": "AST-103"
+        },
+        {
+          "direction": "out",
+          "from": {
+            "name": "Rohan Kapoor",
+            "email": "ventures@humanityfounders.demo"
+          },
+          "to": {
+            "name": "Divya Nambiar",
+            "email": "divya@projectsetu.demo"
+          },
+          "body": "A gentle reminder about the board pack.",
+          "daysAgo": 5,
+          "time": "10:00",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": "AST-103"
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a3-001",
+      "accountKey": "a3",
+      "subject": "Second term fee due on 25 Nov",
+      "expectedLabel": "assistant_reply",
+      "tags": [
+        "action_required"
+      ],
+      "assignedTo": "AST-103",
+      "isUnread": false,
+      "isStarred": false,
+      "dueInDays": 9,
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Greenfield Public School",
+            "email": "office@greenfieldschool.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan.kapoor.demo@gmail.com"
+          },
+          "body": "The second term fee of INR 85,000 is due on 25 Nov. Please pay via the parent portal.",
+          "daysAgo": 2,
+          "time": "09:00",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a3-002",
+      "accountKey": "a3",
+      "subject": "Annual membership renewal",
+      "expectedLabel": "assistant_reply",
+      "tags": [
+        "action_required"
+      ],
+      "assignedTo": "AST-103",
+      "isUnread": false,
+      "isStarred": false,
+      "dueInDays": 14,
+      "snoozedForDays": 2,
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Lakeview Club",
+            "email": "membership@lakeviewclub.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan.kapoor.demo@gmail.com"
+          },
+          "body": "Your annual membership renewal of INR 1,20,000 is due on 30 Nov. Please confirm the payment mode.",
+          "daysAgo": 3,
+          "time": "11:00",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": [
+        {
+          "by": "AST-103",
+          "action": "snoozed",
+          "daysAgo": 3,
+          "time": "12:00",
+          "note": "Snoozed for 2 days"
+        }
+      ]
+    },
+    {
+      "key": "a3-003",
+      "accountKey": "a3",
+      "subject": "Service slots for your car",
+      "expectedLabel": "assistant_reply",
+      "tags": [
+        "meeting"
+      ],
+      "assignedTo": "AST-103",
+      "isUnread": true,
+      "isStarred": false,
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "AutoCare Service",
+            "email": "booking@autocare.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan.kapoor.demo@gmail.com"
+          },
+          "body": "Your car is due for service. Slots are available on Sat 10 AM or Mon 2 PM. Which do you prefer?",
+          "daysAgo": 1,
+          "time": "10:30",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a3-004",
+      "accountKey": "a3",
+      "subject": "Documents needed for tax filing",
+      "expectedLabel": "assistant_reply",
+      "tags": [
+        "action_required"
+      ],
+      "assignedTo": "AST-103",
+      "isUnread": false,
+      "isStarred": false,
+      "dueInDays": 8,
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Bansal & Co.",
+            "email": "tax@bansalco.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan.kapoor.demo@gmail.com"
+          },
+          "body": "Please share Form 16 and investment proofs so that we can begin the filing for this year.",
+          "daysAgo": 2,
+          "time": "15:20",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a3-005",
+      "accountKey": "a3",
+      "subject": "Painting quote for the Indiranagar flat",
+      "expectedLabel": "assistant_reply",
+      "tags": [],
+      "assignedTo": "AST-104",
+      "isUnread": false,
+      "isStarred": false,
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "HomeCare Painters",
+            "email": "quotes@homecarepainters.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan.kapoor.demo@gmail.com"
+          },
+          "body": "Our quote for painting the Indiranagar flat is INR 1,45,000 including materials. Please confirm to schedule the work.",
+          "daysAgo": 4,
+          "time": "12:10",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a3-006",
+      "accountKey": "a3",
+      "subject": "Please confirm: table for 6, Saturday 8 PM",
+      "expectedLabel": "assistant_reply",
+      "tags": [
+        "meeting"
+      ],
+      "assignedTo": "AST-103",
+      "isUnread": true,
+      "isStarred": false,
+      "meeting": {
+        "inDays": 5,
+        "time": "20:00",
+        "title": "Dinner at The Coastal Table"
+      },
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "The Coastal Table",
+            "email": "reservations@coastaltable.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan.kapoor.demo@gmail.com"
+          },
+          "body": "We have a table for 6 on Saturday at 8 PM. Please confirm to hold the booking.",
+          "daysAgo": 1,
+          "time": "13:15",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a3-007",
+      "accountKey": "a3",
+      "subject": "Appa's 75th birthday: dates",
+      "expectedLabel": "client_reply",
+      "tags": [
+        "important"
+      ],
+      "assignedTo": "AST-103",
+      "isUnread": true,
+      "isStarred": false,
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Lakshmi Kapoor",
+            "email": "lakshmi.kapoor@gmail.com"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan.kapoor.demo@gmail.com"
+          },
+          "body": "Rohan, we are planning Appa's 75th for the last weekend of December. Can you confirm which dates work for you and the family?",
+          "daysAgo": 2,
+          "time": "20:30",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a3-008",
+      "accountKey": "a3",
+      "subject": "Quick favour",
+      "expectedLabel": "client_reply",
+      "tags": [],
+      "assignedTo": "AST-103",
+      "isUnread": false,
+      "isStarred": false,
+      "demo": "correction_rule_demo: AI likely says needs_review, assistant adds rule for this sender",
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Prof. R. Sundaram",
+            "email": "sundaram@familyadvisory.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan.kapoor.demo@gmail.com"
+          },
+          "body": "Rohan beta, could you look at something for me when you get a moment? Will explain on call.",
+          "daysAgo": 6,
+          "time": "11:45",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a3-009",
+      "accountKey": "a3",
+      "subject": "Family trust documents for your review",
+      "expectedLabel": "client_reply",
+      "tags": [
+        "important"
+      ],
+      "assignedTo": "AST-103",
+      "isUnread": false,
+      "isStarred": false,
+      "demo": "correction_rule_demo",
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Prof. R. Sundaram",
+            "email": "sundaram@familyadvisory.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan.kapoor.demo@gmail.com"
+          },
+          "body": "Sharing the trust restructuring documents for your review. Please let me know your thoughts.",
+          "daysAgo": 4,
+          "time": "10:20",
+          "attachments": [
+            "Trust_Documents.pdf"
+          ],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a3-010",
+      "accountKey": "a3",
+      "subject": "Can we speak this week?",
+      "expectedLabel": "client_reply",
+      "tags": [
+        "important"
+      ],
+      "assignedTo": "AST-103",
+      "isUnread": true,
+      "isStarred": false,
+      "demo": "correction_rule_demo",
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Prof. R. Sundaram",
+            "email": "sundaram@familyadvisory.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan.kapoor.demo@gmail.com"
+          },
+          "body": "Can we speak this week about the trust? Please keep Sunday evening free.",
+          "daysAgo": 1,
+          "time": "13:15",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a3-011",
+      "accountKey": "a3",
+      "subject": "Parent-teacher meeting on 2 Dec",
+      "expectedLabel": "client_reply",
+      "tags": [
+        "meeting"
+      ],
+      "assignedTo": "AST-103",
+      "isUnread": false,
+      "isStarred": false,
+      "meeting": {
+        "inDays": 16,
+        "time": "10:00",
+        "title": "Parent-teacher meeting"
+      },
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Greenfield Public School",
+            "email": "office@greenfieldschool.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan.kapoor.demo@gmail.com"
+          },
+          "body": "The parent-teacher meeting for Class 6 is on 2 Dec at 10 AM. We request parents to attend in person.",
+          "daysAgo": 3,
+          "time": "09:40",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a3-012",
+      "accountKey": "a3",
+      "subject": "Reallocating INR 5 crore from debt to equity",
+      "expectedLabel": "client_reply",
+      "tags": [
+        "important"
+      ],
+      "assignedTo": "AST-103",
+      "isUnread": false,
+      "isStarred": false,
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Ritika Shah (Private Banking)",
+            "email": "ritika.shah@privatebank.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan.kapoor.demo@gmail.com"
+          },
+          "body": "Rohan, I would like to discuss reallocating INR 5 crore from debt to equity. This needs your personal decision.",
+          "daysAgo": 2,
+          "time": "12:30",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a3-013",
+      "accountKey": "a3",
+      "subject": "Seller accepted: token advance decision",
+      "expectedLabel": "client_reply",
+      "tags": [
+        "important",
+        "action_required"
+      ],
+      "assignedTo": "AST-103",
+      "isUnread": false,
+      "isStarred": true,
+      "dueInDays": 4,
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Skyline Realty",
+            "email": "deals@skylinerealty.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan.kapoor.demo@gmail.com"
+          },
+          "body": "The seller has accepted your offer at INR 6.2 crore. We need your decision on the token advance by Friday.",
+          "daysAgo": 4,
+          "time": "16:00",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a3-014",
+      "accountKey": "a3",
+      "subject": "Markets, policy and what to watch",
+      "expectedLabel": "no_reply",
+      "tags": [
+        "general"
+      ],
+      "assignedTo": "AST-103",
+      "isUnread": false,
+      "isStarred": false,
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "The Morning Brief",
+            "email": "hello@morningbrief.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan.kapoor.demo@gmail.com"
+          },
+          "body": "Today's top stories on markets, policy and global trade.",
+          "daysAgo": 1,
+          "time": "06:30",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a3-015",
+      "accountKey": "a3",
+      "subject": "10 winter escapes within 4 hours of Bengaluru",
+      "expectedLabel": "no_reply",
+      "tags": [
+        "general"
+      ],
+      "assignedTo": "AST-103",
+      "isUnread": false,
+      "isStarred": false,
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Travel Notes India",
+            "email": "editor@travelnotes.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan.kapoor.demo@gmail.com"
+          },
+          "body": "Our favourite short getaways for the winter season.",
+          "daysAgo": 2,
+          "time": "07:00",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a3-016",
+      "accountKey": "a3",
+      "subject": "Your October statement is ready",
+      "expectedLabel": "no_reply",
+      "tags": [
+        "general"
+      ],
+      "assignedTo": "AST-103",
+      "isUnread": false,
+      "isStarred": false,
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Private Bank Statements",
+            "email": "statements@privatebank.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan.kapoor.demo@gmail.com"
+          },
+          "body": "Your account statement for October is now available in the portal.",
+          "daysAgo": 3,
+          "time": "08:30",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a3-017",
+      "accountKey": "a3",
+      "subject": "Your order has been delivered",
+      "expectedLabel": "no_reply",
+      "tags": [
+        "general"
+      ],
+      "assignedTo": "AST-103",
+      "isUnread": false,
+      "isStarred": false,
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Amazon.in",
+            "email": "shipment-tracking@amazon.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan.kapoor.demo@gmail.com"
+          },
+          "body": "Your package with Ergonomic Laptop Stand was delivered today.",
+          "daysAgo": 1,
+          "time": "15:00",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a3-018",
+      "accountKey": "a3",
+      "subject": "Your subscription renews on 28 Nov",
+      "expectedLabel": "no_reply",
+      "tags": [
+        "general"
+      ],
+      "assignedTo": "AST-103",
+      "isUnread": false,
+      "isStarred": false,
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "StreamPlus",
+            "email": "billing@streamplus.com"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan.kapoor.demo@gmail.com"
+          },
+          "body": "Your StreamPlus subscription will renew on 28 Nov. No action is needed.",
+          "daysAgo": 2,
+          "time": "08:00",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a3-019",
+      "accountKey": "a3",
+      "subject": "Security alert: new sign-in on Windows",
+      "expectedLabel": "no_reply",
+      "tags": [
+        "important"
+      ],
+      "assignedTo": "AST-103",
+      "isUnread": false,
+      "isStarred": false,
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Google",
+            "email": "no-reply@accounts.google.com"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan.kapoor.demo@gmail.com"
+          },
+          "body": "A new sign-in was detected. If this was you, you do not need to do anything.",
+          "daysAgo": 1,
+          "time": "22:40",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a3-020",
+      "accountKey": "a3",
+      "subject": "Bill payment received",
+      "expectedLabel": "no_reply",
+      "tags": [
+        "general"
+      ],
+      "assignedTo": "AST-103",
+      "isUnread": false,
+      "isStarred": false,
+      "isArchived": true,
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Power Utility Board",
+            "email": "payments@powerutility.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan.kapoor.demo@gmail.com"
+          },
+          "body": "We have received your electricity bill payment of INR 6,820. Thank you.",
+          "daysAgo": 5,
+          "time": "10:00",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": [
+        {
+          "by": "AST-103",
+          "action": "archived",
+          "daysAgo": 5,
+          "time": "11:00"
+        }
+      ]
+    },
+    {
+      "key": "a3-021",
+      "accountKey": "a3",
+      "subject": "URGENT: Flash sale ends in 1 hour",
+      "expectedLabel": "no_reply",
+      "tags": [
+        "general"
+      ],
+      "assignedTo": "AST-103",
+      "isUnread": false,
+      "isStarred": false,
+      "demo": "tricky: sounds urgent but needs no reply",
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "FlashMart",
+            "email": "deals@flashmart-sale.com"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan.kapoor.demo@gmail.com"
+          },
+          "body": "Last chance! Up to 70% off ends in 1 hour. Shop now.",
+          "daysAgo": 1,
+          "time": "05:50",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a3-022",
+      "accountKey": "a3",
+      "subject": "Car service completed",
+      "expectedLabel": "no_reply",
+      "tags": [
+        "general"
+      ],
+      "assignedTo": "AST-103",
+      "isUnread": false,
+      "isStarred": false,
+      "isCompleted": true,
+      "demo": "resolved_thread",
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "AutoCare Service",
+            "email": "booking@autocare.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan.kapoor.demo@gmail.com"
+          },
+          "body": "Your car service is complete. Invoice attached.",
+          "daysAgo": 8,
+          "time": "17:00",
+          "attachments": [
+            "Service_Invoice.pdf"
+          ],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        },
+        {
+          "direction": "out",
+          "from": {
+            "name": "Rohan Kapoor",
+            "email": "rohan.kapoor.demo@gmail.com"
+          },
+          "to": {
+            "name": "AutoCare Service",
+            "email": "booking@autocare.in"
+          },
+          "body": "Thank you. Payment made today.",
+          "daysAgo": 7,
+          "time": "10:00",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": "AST-103"
+        },
+        {
+          "direction": "in",
+          "from": {
+            "name": "AutoCare Service",
+            "email": "booking@autocare.in"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan.kapoor.demo@gmail.com"
+          },
+          "body": "Payment received. Thanks, all done!",
+          "daysAgo": 6,
+          "time": "12:00",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": [
+        {
+          "by": "AST-103",
+          "action": "marked_completed",
+          "daysAgo": 6,
+          "time": "13:00"
+        }
+      ]
+    },
+    {
+      "key": "a3-023",
+      "accountKey": "a3",
+      "subject": "Please see",
+      "expectedLabel": "needs_review",
+      "tags": [],
+      "assignedTo": "AST-103",
+      "isUnread": false,
+      "isStarred": false,
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Mohan Lal",
+            "email": "mohanlal.k@gmail.com"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan.kapoor.demo@gmail.com"
+          },
+          "body": "Please see attached.",
+          "daysAgo": 2,
+          "time": "14:20",
+          "attachments": [
+            "Scan_0147.pdf"
+          ],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a3-024",
+      "accountKey": "a3",
+      "subject": "Re: Saturday",
+      "expectedLabel": "needs_review",
+      "tags": [],
+      "assignedTo": "AST-103",
+      "isUnread": true,
+      "isStarred": false,
+      "messages": [
+        {
+          "direction": "in",
+          "from": {
+            "name": "Aditya Bose",
+            "email": "aditya.bose@gmail.com"
+          },
+          "to": {
+            "name": "Rohan Kapoor",
+            "email": "rohan.kapoor.demo@gmail.com"
+          },
+          "body": "Sounds good, see you then? Or should I check with Rohan first?",
+          "daysAgo": 1,
+          "time": "19:50",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": null
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a3-025",
+      "accountKey": "a3",
+      "subject": "Tax documents sent to CA",
+      "expectedLabel": "no_reply",
+      "tags": [
+        "waiting_for_response"
+      ],
+      "assignedTo": "AST-103",
+      "isUnread": false,
+      "isStarred": false,
+      "messages": [
+        {
+          "direction": "out",
+          "from": {
+            "name": "Rohan Kapoor",
+            "email": "rohan.kapoor.demo@gmail.com"
+          },
+          "to": {
+            "name": "Bansal & Co.",
+            "email": "tax@bansalco.in"
+          },
+          "body": "Sharing Form 16 and investment proofs. Please confirm receipt.",
+          "daysAgo": 5,
+          "time": "11:30",
+          "attachments": [
+            "Tax_Docs.zip"
+          ],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": "AST-103"
+        }
+      ],
+      "activity": []
+    },
+    {
+      "key": "a3-026",
+      "accountKey": "a3",
+      "subject": "Realtor: revised sale agreement",
+      "expectedLabel": "no_reply",
+      "tags": [
+        "waiting_for_response",
+        "important"
+      ],
+      "assignedTo": "AST-104",
+      "isUnread": false,
+      "isStarred": false,
+      "messages": [
+        {
+          "direction": "out",
+          "from": {
+            "name": "Rohan Kapoor",
+            "email": "rohan.kapoor.demo@gmail.com"
+          },
+          "to": {
+            "name": "Skyline Realty",
+            "email": "deals@skylinerealty.in"
+          },
+          "body": "Please share the revised sale agreement incorporating the agreed price.",
+          "daysAgo": 9,
+          "time": "10:00",
+          "attachments": [],
+          "cc": [],
+          "isForwarded": false,
+          "sentBy": "AST-104"
+        }
+      ],
+      "activity": []
+    }
+  ]
+}

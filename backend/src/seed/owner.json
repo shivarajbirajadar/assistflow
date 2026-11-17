@@ -1,0 +1,130 @@
+{
+  "_readme": "Seed file. Passwords are plain here only for seeding: seed.js must hash them with bcrypt. Owner logs in with email + password. Assistants have NO login, only assistantId + name. actorId is the id the owner types in the Who is working popup.",
+  "owner": {
+    "name": "Rohan Kapoor",
+    "email": "rohan@humanityfounders.demo",
+    "password": "Demo@1234",
+    "title": "Co-founder and Managing Partner",
+    "company": "Humanity Founders",
+    "actorId": "OWN-001"
+  },
+  "assistants": [
+    {
+      "assistantId": "AST-101",
+      "name": "Kavya Iyer"
+    },
+    {
+      "assistantId": "AST-102",
+      "name": "Rohit Nair"
+    },
+    {
+      "assistantId": "AST-103",
+      "name": "Sneha Kulkarni"
+    },
+    {
+      "assistantId": "AST-104",
+      "name": "Arjun Bhatt"
+    }
+  ],
+  "accounts": [
+    {
+      "key": "a1",
+      "provider": "outlook",
+      "address": "rohan@humanityfounders.demo",
+      "label": "Humanity Founders (Main)",
+      "status": "connected",
+      "lastSyncedMinutesAgo": 3,
+      "defaultAssistantId": "AST-101"
+    },
+    {
+      "key": "a2",
+      "provider": "gmail",
+      "address": "ventures@humanityfounders.demo",
+      "label": "Stealth Ventures",
+      "status": "connected",
+      "lastSyncedMinutesAgo": 7,
+      "defaultAssistantId": "AST-102"
+    },
+    {
+      "key": "a3",
+      "provider": "gmail",
+      "address": "rohan.kapoor.demo@gmail.com",
+      "label": "Personal",
+      "status": "needs_reauth",
+      "lastSyncedMinutesAgo": 2880,
+      "defaultAssistantId": "AST-103"
+    }
+  ],
+  "simulate": [
+    {
+      "id": "sim-01",
+      "type": "reply",
+      "from": {
+        "name": "Urban Spaces Furniture",
+        "email": "sales@urbanspaces.in"
+      },
+      "body": "Thanks. To go beyond 8%, our director needs Rohan's direct approval on a 12 month supply agreement at 20% off. Could Rohan confirm personally?",
+      "expectedLabelAfter": "client_reply",
+      "convKey": "a1-014"
+    },
+    {
+      "id": "sim-02",
+      "type": "reply",
+      "from": {
+        "name": "The Orchid Convention Centre",
+        "email": "events@orchidconvention.in"
+      },
+      "body": "Please find the final invoice attached. Kindly share the payment schedule.",
+      "expectedLabelAfter": "assistant_reply",
+      "convKey": "a1-054"
+    },
+    {
+      "id": "sim-03",
+      "type": "reply",
+      "from": {
+        "name": "Shalini Gupta",
+        "email": "shalini@humanityfounders.demo"
+      },
+      "body": "Sorry, forgot the context. This is the partner proposal from Navrachna. Rohan, I need your yes or no on whether we proceed.",
+      "expectedLabelAfter": "client_reply",
+      "convKey": "a1-048"
+    },
+    {
+      "id": "sim-04",
+      "type": "new",
+      "accountKey": "a1",
+      "subject": "Urgent: media enquiry on the registrar notice",
+      "from": {
+        "name": "Sana Qureshi",
+        "email": "sana@thecapitalpost.in"
+      },
+      "body": "We have heard about the registrar notice. Would Rohan be willing to comment today on the record?",
+      "expectedLabelAfter": "client_reply"
+    },
+    {
+      "id": "sim-05",
+      "type": "new",
+      "accountKey": "a2",
+      "subject": "Aarambh: investor wants to meet Rohan this week",
+      "from": {
+        "name": "Sameer Joshi",
+        "email": "sameer@lakeviewcapital.in"
+      },
+      "body": "Our managing partner would like to meet Rohan in person this week to discuss the term sheet. Can Rohan make Thursday evening?",
+      "expectedLabelAfter": "client_reply",
+      "confidentialCodename": "Project Aarambh"
+    },
+    {
+      "id": "sim-06",
+      "type": "new",
+      "accountKey": "a3",
+      "subject": "Fee receipt for second term",
+      "from": {
+        "name": "Greenfield Public School",
+        "email": "office@greenfieldschool.in"
+      },
+      "body": "We have received the second term fee of INR 85,000. Receipt attached. No action is required.",
+      "expectedLabelAfter": "no_reply"
+    }
+  ]
+}
