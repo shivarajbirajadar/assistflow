@@ -1,5 +1,12 @@
 import User from '../models/User.js';
-import { ApiError, asyncHandler, sendSuccess, signToken } from '../core/helpers.js';
+import {
+  ApiError,
+  asyncHandler,
+  sendSuccess,
+  signToken,
+} from '../core/helpers.js';
+
+import { cloneDemoDataForUser } from '../services/demoData.service.js';
 
 // ---------- Register ----------
 export const register = asyncHandler(async (req, res) => {
@@ -15,7 +22,9 @@ export const register = asyncHandler(async (req, res) => {
 
   const normalizedEmail = email.trim().toLowerCase();
 
-  const existingUser = await User.findOne({ email: normalizedEmail });
+  const existingUser = await User.findOne({
+    email: normalizedEmail,
+  });
 
   if (existingUser) {
     throw new ApiError(409, 'An account with this email already exists');
@@ -28,6 +37,15 @@ export const register = asyncHandler(async (req, res) => {
     title,
     company,
   });
+
+  // Clone master demo data for the newly registered user
+  try {
+    await cloneDemoDataForUser(user);
+  } catch (error) {
+    // Remove the newly created user if demo cloning fails
+    await User.deleteOne({ _id: user._id });
+    throw error;
+  }
 
   const token = signToken(user._id);
 
